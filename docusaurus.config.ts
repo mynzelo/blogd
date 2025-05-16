@@ -1,14 +1,14 @@
 import type * as Preset from '@docusaurus/preset-classic'
-import type {Config} from '@docusaurus/types'
-import {themes as prismThemes} from 'prism-react-renderer'
+import type { Config } from '@docusaurus/types'
+import { themes as prismThemes } from 'prism-react-renderer'
 
 const BASE_URL = process.env.BASE_URL ?? ''
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-    title: 'Website for Blogs and Others',
-    tagline: 'Publishing words is cool',
+    title: 'mynzelo的博客',
+    tagline: '记录生活点滴',
     favicon: 'img/favicon.ico',
     url: 'https://www.mynzelo.com',
     baseUrl: BASE_URL,
@@ -49,9 +49,9 @@ const config: Config = {
     themeConfig: {
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
-            title: `mynzelo's Blog`,
+            title: `mynzelo的博客`,
             logo: {
-                alt: `mynzelo's Blog`,
+                alt: `mynzelo的博客`,
                 src: 'img/logo.svg',
             },
             items: [
@@ -59,11 +59,11 @@ const config: Config = {
                     type: 'docSidebar',
                     sidebarId: 'tutorialSidebar',
                     position: 'left',
-                    label: 'Docs',
+                    label: '文档',
                 },
                 {
                     to: '/blog',
-                    label: 'Blog',
+                    label: '博客',
                     position: 'left'
                 },
                 {
@@ -77,16 +77,16 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
+                    title: '文档',
                     items: [
                         {
-                            label: 'About',
+                            label: '关于',
                             to: '/docs/about',
                         },
                     ],
                 },
                 {
-                    title: 'Community',
+                    title: '社交网络',
                     items: [
                         {
                             label: 'IMDB',
@@ -103,10 +103,10 @@ const config: Config = {
                     ],
                 },
                 {
-                    title: 'More',
+                    title: '更多',
                     items: [
                         {
-                            label: 'Blog',
+                            label: '博客',
                             to: '/blog',
                         },
                         {
@@ -122,7 +122,14 @@ const config: Config = {
             theme: prismThemes.github,
             darkTheme: prismThemes.dracula,
         },
+
     } satisfies Preset.ThemeConfig,
+    scripts: [
+        {
+            src: '/js/pangu-run.js', // 见下文自定义脚本
+            async: true,
+        },
+    ],
 }
 
 export default config

@@ -10,35 +10,35 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Blogs',
+    title: '技术博客',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-          Writing and publishing blogs is the main reason for me to build this website.
+        
       </>
     ),
   },
   {
-    title: 'Casual Drafts',
+    title: '生活点滴',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        I'm not a writer, so I need to write some drafts to be a writer.
+        
       </>
     ),
   },
   {
-    title: 'Recent activities',
+    title: '最近活动',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Publish what I am doing.
+        
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
