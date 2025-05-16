@@ -125,10 +125,10 @@ const config: Config = {
 
     } satisfies Preset.ThemeConfig,
     scripts: [
-        {
-            src: '/js/pangu-run.js', // 见下文自定义脚本
-            async: true,
-        },
+
+    ],
+    stylesheets: [
+        'https://unpkg.com/heti@0.9.5/umd/heti.min.css',
     ],
 }
 
